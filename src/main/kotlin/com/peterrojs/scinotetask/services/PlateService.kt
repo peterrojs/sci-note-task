@@ -16,9 +16,9 @@ class PlateService {
         plateDTO.sampleArrays.forEachIndexed { numberOfExperiments, sampleArray ->
 
             // Sort sample list
-            val sortedSampleArray = sampleArray.sortedBy { it.substringAfterLast(" ") }
+            val sortedSampleArray = sampleArray.sorted()
             // Sort reagent list
-            val sortedReagentArray = plateDTO.reagentArrays[numberOfExperiments].sortedBy { it.substringAfterLast(" ") }
+            val sortedReagentArray = plateDTO.reagentArrays[numberOfExperiments].sorted()
 
             sortedSampleArray.forEach { sample ->
                 sortedReagentArray.forEach { reagent ->
